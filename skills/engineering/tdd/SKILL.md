@@ -9,6 +9,17 @@ description: Test-driven development. Use when the user wants to build features 
 
 **Core principle**: Tests should verify behavior through public interfaces, not implementation details. Code can change entirely; tests shouldn't.
 
+**Laziness principle**: The best code is the code never written. Apply the Ponytail Ladder at every GREEN step — stop at the first rung that holds:
+
+1. Does this need to exist at all? Speculative need = skip it.
+2. Stdlib does it? Use it.
+3. Native platform feature covers it? Use it.
+4. Already-installed dependency solves it? Use it.
+5. Can it be one line? One line.
+6. Only then: the minimum code that works.
+
+This applies equally to test code and production code. No test utilities "for later", no shared fixtures you don't need yet, no abstractions over assertions.
+
 **Good tests** are integration-style: they exercise real code paths through public APIs. They describe _what_ the system does, not _how_ it does it. A good test reads like a specification - "user can checkout with valid cart" tells you exactly what capability exists. These tests survive refactors because they don't care about internal structure.
 
 **Bad tests** are coupled to implementation. They mock internal collaborators, test private methods, or verify through external means (like querying a database directly instead of using the interface). The warning sign: your test breaks when you refactor, but behavior hasn't changed. If you rename an internal function and tests fail, those tests were testing implementation, not behavior.
@@ -64,7 +75,7 @@ Write ONE test that confirms ONE thing about the system:
 
 ```
 RED:   Write test for first behavior → test fails
-GREEN: Write minimal code to pass → test passes
+GREEN: Write minimal code to pass → test passes (Ladder applies here)
 ```
 
 This is your tracer bullet - proves the path works end-to-end.
@@ -75,7 +86,7 @@ For each remaining behavior:
 
 ```
 RED:   Write next test → fails
-GREEN: Minimal code to pass → passes
+GREEN: Minimal code to pass → passes (Ladder applies here)
 ```
 
 Rules:
@@ -84,16 +95,21 @@ Rules:
 - Only enough code to pass current test
 - Don't anticipate future tests
 - Keep tests focused on observable behavior
+- Shortest working diff wins — fewest files, fewest lines
+- No interface with one implementation, no factory for one product
+- Mark deliberate simplifications with `// ponytail:` comments naming the ceiling and upgrade path
 
 ### 4. Refactor
 
 After all tests pass, look for [refactor candidates](refactoring.md):
 
+- [ ] **Delete first** — can anything be removed now that the design is clearer?
 - [ ] Extract duplication
 - [ ] Deepen modules (move complexity behind simple interfaces)
 - [ ] Apply SOLID principles where natural
 - [ ] Consider what new code reveals about existing code
 - [ ] Run tests after each refactor step
+- [ ] Boring over clever — clever is what someone decodes at 3am
 
 **Never refactor while RED.** Get to GREEN first.
 
@@ -103,6 +119,17 @@ After all tests pass, look for [refactor candidates](refactoring.md):
 [ ] Test describes behavior, not implementation
 [ ] Test uses public interface only
 [ ] Test would survive internal refactor
-[ ] Code is minimal for this test
+[ ] Code is minimal for this test (Ladder applied)
 [ ] No speculative features added
+[ ] No unrequested abstractions in test or production code
+[ ] Shortest diff that makes the test pass
 ```
+
+## When NOT to be lazy
+
+Never simplify away: input validation at trust boundaries, error handling
+that prevents data loss, security measures, accessibility basics, anything
+explicitly requested.
+
+Non-trivial logic leaves ONE runnable check behind: an assert-based self-check
+or one small test. No frameworks, no fixtures unless asked.
