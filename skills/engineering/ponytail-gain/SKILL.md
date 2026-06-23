@@ -1,0 +1,28 @@
+# Ponytail Gain
+
+Display the measured-impact scoreboard. One-shot, change nothing.
+
+## Scoreboard
+
+```
+  ponytail gain                     benchmark median · 5 tasks · 3 models
+
+  Lines of code   no-skill  ████████████████████  100%
+                  ponytail  ██▌·················    6–20%   ▼ 80–94%
+  Cost            no-skill  ████████████████████  100%
+                  ponytail  █████▌··············   23–53%  ▼ 47–77%
+  Speed           ponytail  ▸ 3–6× faster
+
+  This repo:  /ponytail-debt  (shortcuts you deferred)
+              /ponytail-audit (what's still cuttable)
+```
+
+## Honesty boundary
+
+These are benchmark medians, not this repo. NEVER print a per-repo savings
+number: the unbuilt version was never written, so there is no real baseline.
+The only real per-repo figures come from ponytail-debt (a counted ledger).
+
+## Boundaries
+
+One-shot display. Edits nothing, changes no mode.
