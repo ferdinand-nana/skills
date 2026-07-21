@@ -1,0 +1,6 @@
+# Generated interview artifacts
+answers*.json
+Interview Notes - Senior Software Developer - *.docx
+
+# Keep template
+!template/
