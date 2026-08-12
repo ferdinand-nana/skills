@@ -1,9 +1,10 @@
 # Generated interview artifacts
-answers*.json
-Interview Notes - Senior Software Developer - *.docx
+./answers*.json
+./Interview Notes - Senior Software Developer - *.docx
 **/__pycache__/**
 .venv/
 test/__pycache__/**
 
 # Keep template
 !template/
+!skills/manager/sr-interview-generator/template/Interview Notes*.docx
