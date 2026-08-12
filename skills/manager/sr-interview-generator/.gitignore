@@ -1,6 +1,9 @@
 # Generated interview artifacts
 answers*.json
 Interview Notes - Senior Software Developer - *.docx
+**/__pycache__/**
+.venv/
+test/__pycache__/**
 
 # Keep template
 !template/
