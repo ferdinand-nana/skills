@@ -144,7 +144,7 @@ def add_question_row(table, context: str, question: str, answer: str) -> None:
 
     notes_row = table.add_row()
     notes_cell = notes_row.cells[0].merge(notes_row.cells[1])
-    notes_cell.paragraphs[0].add_run("\u2022 ")
+    notes_cell.paragraphs[0].add_run("")
 
 
 def build_category_table(doc: Document, placeholder_text: str, questions: list) -> None:
