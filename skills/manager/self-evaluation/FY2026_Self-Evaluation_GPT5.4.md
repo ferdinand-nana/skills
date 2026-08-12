@@ -1,0 +1,36 @@
+Self-evaluation — FY2026 — Ferdinand Nana, Manager
+
+## The WHAT
+
+FY2026 was a year in which I focused on leading the team through delivery, modernization, and operational improvement while still contributing directly to a few critical technical areas. My primary responsibility as a Manager was to align the team around meaningful business outcomes, remove delivery blockers, and ensure that complex initiatives moved forward with the right balance of quality, speed, and accountability. Across the year, the strongest evidence of that impact was the team's successful delivery of major platform capabilities, the migration of important services to Spring Boot, and the resolution of high-severity security issues.
+
+One of the most significant achievements of the year was the delivery of the Payment Factory. The team delivered support for PAIN.001 v3, PAIN.001 v3ch02, PAIN.001 v9, and MT101, while also implementing the core feature set needed to make the solution operational: file exchange, configuration, workflow, and transmission through a service bureau. This was important not only because of the number of supported standards and components involved, but also because it required disciplined coordination across design, development, and delivery to ensure the solution came together as a coherent product rather than a set of disconnected features.
+
+The second major area of delivery was the Reports Cargo Spring Migration. My team successfully migrated several important capabilities to Spring Boot, including Components Services, Reports Services, Report Designer Service, and Configuration Service. Within Reports Services, this also covered business-critical features such as workspace, tenant management, user management, snapshot management, bookmarks, and capture templates. This work represented a meaningful modernization step for the platform and required the team to manage technical change carefully while still preserving continuity for the supported features and services.
+
+In parallel with feature delivery and modernization, the team also addressed high-severity security issues. This mattered because it showed we could balance feature delivery with platform trust and safety. From a management perspective, this required clear prioritization and a willingness to shift attention quickly when risk demanded it.
+
+Alongside my team leadership responsibilities, I also made direct technical contributions where they were most useful. I refactored the CMS implementation to respond to updated requirements, which helped keep that area aligned with evolving needs rather than allowing the solution to drift away from the intended outcome. I also supported the implementation of authentication in Spring Boot applications, which contributed to more consistent security foundations across the services being modernized. In addition, I created automations for application setup in both local and server environments, helping improve repeatability and reducing friction in deployment and developer onboarding activities.
+
+Another important personal contribution was implementing the Configuration Service application that manages properties for the other Spring Boot services. I see this as a valuable enabling component because it supports consistency across services and helps reduce configuration sprawl as the Spring Boot landscape grows. These contributions kept me close to the architecture and delivery details, which helped me make better decisions and guide the team effectively.
+
+The year also brought challenges. Delivering multiple modernization efforts at the same time as security remediation and evolving requirements required constant reprioritization. Refactoring CMS based on updated requirements highlighted the importance of adaptability, while the Spring Boot authentication and configuration work reinforced the need for standardization across applications. These experiences strengthened my ability to balance short-term delivery pressure with the longer-term need to improve maintainability, consistency, and operational readiness.
+
+Overall, I believe my FY2026 performance was strong and aligned with the expectations of the Manager grade. I led the team to execute on significant delivery commitments, contributed directly to important technical foundations, and helped steer work across product delivery, modernization, and risk reduction. My impact was most visible in coordinating team execution, translating complex technical work into tangible business outcomes, and maintaining focus on quality and security while delivering change.
+
+## The HOW
+
+### Customer Centric
+I kept customer and business value at the center of delivery by focusing the team on solutions that were usable, secure, and operationally reliable. Delivering the Payment Factory with support for multiple payment standards and ensuring the modernization of reporting services were both examples of turning technical execution into capabilities that better serve product and business needs.
+
+### Stronger Together
+The scope of work delivered in FY2026 required strong collaboration across team members and across initiatives, and I worked deliberately to create that alignment. By combining team delivery ownership with selective hands-on technical support in areas such as authentication, automation, and configuration management, I helped the team move faster together and kept critical workstreams connected rather than siloed.
+
+### Growth Mindset
+Much of this year involved change: updated CMS requirements, Spring Boot migration, security remediation, and the need to standardize how services were set up and configured. I leaned into that change by supporting better technical patterns, encouraging modernization, and helping the team adopt more maintainable ways of working instead of staying with approaches that were familiar but less scalable.
+
+## Your GROWTH
+
+FY2026 also helped clarify the next stage of my growth as a Manager. The work I led this year strengthened several of the capabilities expected at this level, especially communication, operational excellence, innovation, and coaching through delivery. Managing multiple concurrent priorities while still contributing technically reinforced the importance of setting clear direction, creating repeatable operating patterns, and helping the team stay focused on the highest-value work.
+
+Looking ahead, I want to deepen my impact in the areas most relevant to the Manager role: stronger coaching and mentoring, sharper prioritization across competing initiatives, and clearer communication of technical direction in business terms. I also want to build on this year's modernization work by making standardization, secure-by-default design, and delivery predictability more systematic across the team. My goal is to continue growing as a manager who not only delivers results through the team, but also develops stronger engineers, improves execution discipline, and creates an environment where complex technical change can be delivered with confidence.
